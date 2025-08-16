@@ -1,14 +1,14 @@
 <div align="center">
 
-![Krishi AI Banner](https://via.placeholder.com/1200x400/4ade80/ffffff?text=🌾+कृषि+AI+सलाहकार+🌾)
+![Banner](media/AIchat.png)
 
 # 🌾 कृषि AI सलाहकार
 ### *Revolutionary Agricultural Intelligence Platform*
 
-[![AI Powered](https://img.shields.io/badge/🧠_AI-Ollama_+_Llama_3.2-4ade80?style=for-the-badge&logo=brain&logoColor=white)](https://ollama.ai)
-[![Hackathon Winner](https://img.shields.io/badge/🏆_Built_for-Bangalore_Hackathon_2025-ff6b35?style=for-the-badge&logo=trophy&logoColor=white)](https://hackathon.com)
-[![Local Processing](https://img.shields.io/badge/🔒_Privacy-Local_AI_Processing-22c55e?style=for-the-badge&logo=shield&logoColor=white)](https://github.com)
-[![Open Source](https://img.shields.io/badge/💝_Open-Source_Love-e11d48?style=for-the-badge&logo=heart&logoColor=white)](https://github.com)
+[![AI Powered](https://img.shields.io/badge/AI-Ollama%20%2B%20Llama%203.2-4ade80?style=for-the-badge)](https://ollama.ai)
+[![Hackathon](https://img.shields.io/badge/Built%20for-Bangalore%20Hackathon%202025-ff6b35?style=for-the-badge)](https://hackathon.com)
+[![Local Processing](https://img.shields.io/badge/Privacy-Local%20AI%20Processing-22c55e?style=for-the-badge)](https://github.com)
+[![Open Source](https://img.shields.io/badge/Open-Source%20Love-e11d48?style=for-the-badge)](https://github.com)
 
 ### **🎯 Empowering 600+ Million Indian Farmers with AI-Driven Agricultural Intelligence**
 
@@ -18,47 +18,46 @@
 
 ---
 
-### 🎬 **DEMO VIDEO**
-[![Demo Video](https://via.placeholder.com/800x450/1f2937/ffffff?text=▶️+WATCH+DEMO+VIDEO)](https://your-demo-video-link.com)
-*Click to watch our 3-minute demo showcasing all features*
+## � ***DEMO VIDEO - WATCH OUR PLATFORM IN ACTION!**
 
----
+<video width="100%" controls>
+  <source src="media/Video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+**[📹 DOWNLOAD VIDEO IF NOT PLAYING](media/Video.mp4)**
+
+*3-minute comprehensive demo showcasing all features of कृषि AI सलाहकार*
 
 </div>
 
-## 🌟 **THE REVOLUTION STARTS HERE**
+---
 
-<div align="center">
+## � **THE RREVOLUTION STARTS HERE**
 
 | 🎯 **THE PROBLEM** | 🚀 **OUR SOLUTION** |
-|:---:|:---:|
+|:---|:---|
 | 600M+ farmers lack agricultural expertise | AI-powered advisor available 24/7 |
 | Language barriers in digital solutions | Native Hindi, Punjabi, English support |
 | Expensive cloud-based AI services | Local Ollama AI processing |
 | Poor connectivity in rural areas | SMS integration + offline capabilities |
 | Complex interfaces for farmers | Beautiful, intuitive glass-morphism UI |
 
-</div>
-
 ---
 
 ## ⚡ **INSTANT DEMO** *(30 Seconds to WOW!)*
 
-<div align="center">
-
-### � *m*One-Click Launch**
+### 🎮 **One-Click Launch**
 
 ```bash
-# 🪟 Windows Users
+# Windows Users
 start_enhanced.bat
 
-# 🐧 Mac/Linux Users  
+# Mac/Linux Users  
 chmod +x start_enhanced.sh && ./start_enhanced.sh
 ```
 
-### � **TThen Open:** [http://localhost:3000](http://localhost:3000)
-
-</div>
+### 🌐 **Then Open:** [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -66,35 +65,12 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="20%">
-<img src="https://via.placeholder.com/100x100/4ade80/ffffff?text=🧠" alt="AI Chat" width="80"/>
-<br><strong>AI Chat</strong>
-<br><em>Ask farming questions in Hindi/English</em>
-</td>
-<td align="center" width="20%">
-<img src="https://via.placeholder.com/100x100/3b82f6/ffffff?text=🎯" alt="Crop Advisor" width="80"/>
-<br><strong>Crop Advisor</strong>
-<br><em>AI-powered crop selection</em>
-</td>
-<td align="center" width="20%">
-<img src="https://via.placeholder.com/100x100/ef4444/ffffff?text=📸" alt="Disease Detection" width="80"/>
-<br><strong>Disease Detection</strong>
-<br><em>Upload plant photos for diagnosis</em>
-</td>
-<td align="center" width="20%">
-<img src="https://via.placeholder.com/100x100/06b6d4/ffffff?text=🌤️" alt="Weather" width="80"/>
-<br><strong>Weather Intelligence</strong>
-<br><em>Real-time agricultural weather</em>
-</td>
-<td align="center" width="20%">
-<img src="https://via.placeholder.com/100x100/f59e0b/ffffff?text=📈" alt="Market" width="80"/>
-<br><strong>Market Intelligence</strong>
-<br><em>Live crop prices & trends</em>
-</td>
-</tr>
-</table>
+| 🧠 **AI Chat** | 🎯 **Crop Advisor** | 📸 **Disease Detection** | 🌤️ **Weather** | 📈 **Market** |
+|:---:|:---:|:---:|:---:|:---:|
+| Ask farming questions in Hindi/English | AI-powered crop selection | Upload plant photos for diagnosis | Real-time agricultural weather | Live crop prices & trends |
+
+### 🎨 **Beautiful Glass Morphism UI**
+*Modern design that farmers love to use*
 
 </div>
 
@@ -107,7 +83,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 ### 🎨 **Frontend Excellence**
 ![React](https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/Shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Shadcn](https://img.shields.io/badge/Shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
 
 ### ⚡ **Backend Power**
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -115,8 +91,8 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ### 🧠 **AI Innovation**
-![Ollama](https://img.shields.io/badge/Ollama-Local_AI-FF6B35?style=for-the-badge&logo=ollama&logoColor=white)
-![Llama](https://img.shields.io/badge/Llama_3.2-8A2BE2?style=for-the-badge&logo=meta&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Local_AI-FF6B35?style=for-the-badge)
+![Llama](https://img.shields.io/badge/Llama_3.2-8A2BE2?style=for-the-badge)
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
 
 </div>
@@ -127,14 +103,14 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 ```
 🌾 कृषि-AI-सलाहकार/
-├── 📁 backend/                    # 🐍 Python FastAPI Backend
+├── 📁 backend/                    # Python FastAPI Backend
 │   ├── 🚀 server_enhanced.py      # Main AI-powered server
 │   ├── 📦 requirements.txt        # Python dependencies
 │   └── ⚙️ .env                    # Environment configuration
 │
-├── 📁 frontend/                   # ⚛️ React Frontend
+├── 📁 frontend/                   # React Frontend
 │   ├── 📁 src/
-│   │   ├── 📁 components/ui/      # 🎨 Beautiful Shadcn components
+│   │   ├── 📁 components/ui/      # Beautiful Shadcn components
 │   │   ├── 🎯 App.js              # Main application
 │   │   └── 🎨 index.css           # Tailwind styles
 │   ├── 📦 package.json            # Node.js dependencies
@@ -151,12 +127,6 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 ## 🎯 **5-MINUTE DEMO SCRIPT FOR JUDGES**
 
-<div align="center">
-
-### 🎬 **Perfect Demo Flow**
-
-</div>
-
 | ⏱️ **Time** | 🎯 **Action** | 💫 **What to Show** |
 |:---:|:---|:---|
 | **0:30** | 🏥 **Health Check** | Visit `http://localhost:8001/api/health` - Show all systems ✅ |
@@ -171,30 +141,10 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="25%">
-<h3>🚀 INNOVATION</h3>
-<h2>10/10</h2>
-<p>First agricultural platform with local Ollama AI processing</p>
-</td>
-<td align="center" width="25%">
-<h3>🎯 IMPACT</h3>
-<h2>10/10</h2>
-<p>600M+ farmers, ₹50,000 Crore market opportunity</p>
-</td>
-<td align="center" width="25%">
-<h3>💻 TECH EXCELLENCE</h3>
-<h2>10/10</h2>
-<p>Modern stack, production-ready architecture</p>
-</td>
-<td align="center" width="25%">
-<h3>🎨 PRESENTATION</h3>
-<h2>10/10</h2>
-<p>Beautiful UI, working demo, perfect pitch</p>
-</td>
-</tr>
-</table>
+| 🚀 **INNOVATION** | 🎯 **IMPACT** | 💻 **TECH EXCELLENCE** | 🎨 **PRESENTATION** |
+|:---:|:---:|:---:|:---:|
+| **10/10** | **10/10** | **10/10** | **10/10** |
+| First agricultural platform with local Ollama AI | 600M+ farmers, ₹50,000 Crore market | Modern stack, production-ready | Beautiful UI, working demo |
 
 </div>
 
@@ -202,10 +152,8 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 ## 📊 **THE NUMBERS THAT MATTER**
 
-<div align="center">
-
 | 🎯 **Metric** | 📈 **Value** | 🌟 **Impact** |
-|:---:|:---:|:---|
+|:---|:---:|:---|
 | **🌾 Target Users** | **600M+ Farmers** | Largest demographic in India |
 | **💰 Market Size** | **₹50,000 Crore** | Agricultural advisory services |
 | **📈 Yield Increase** | **15-20%** | Proven through AI recommendations |
@@ -213,6 +161,18 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 | **⚡ Response Time** | **<2 seconds** | Lightning-fast AI processing |
 | **🌍 Languages** | **5+** | Hindi, Punjabi, English, and more |
 | **🔄 Uptime** | **99.9%** | Production-ready reliability |
+
+---
+
+## � **DEEMO VIDEO**
+
+<div align="center">
+
+### **🎥 Watch Our Platform in Action!**
+
+https://github.com/user-attachments/assets/your-video-id-here
+
+*3-minute demo showcasing all features of कृषि AI सलाहकार*
 
 </div>
 
@@ -222,17 +182,41 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 <div align="center">
 
-### 🏠 **Modern Dashboard with Glass Morphism**
-![Dashboard](https://via.placeholder.com/800x500/1f2937/ffffff?text=🏠+Beautiful+Dashboard+with+Glass+Effects)
+### 🏠 **Modern Dashboard with Glass Morphism Design**
+![Dashboard](media/AIchat.png)
+*Beautiful main interface with tabbed navigation and glass morphism effects*
 
-### 🧠 **AI Chat Interface**
-![AI Chat](https://via.placeholder.com/800x500/4ade80/ffffff?text=🧠+AI+Chat+in+Hindi+%26+English)
+### 🧠 **AI Chat Interface - Hindi & English Support**
+![AI Chat Response](media/AiChatResponse.png)
+*Intelligent AI responses in Hindi with detailed agricultural advice*
 
-### 🎯 **Crop Recommendations**
-![Crop Advisor](https://via.placeholder.com/800x500/3b82f6/ffffff?text=🎯+Smart+Crop+Recommendations)
+### 📸 **Disease Detection System**
+![Disease Detection](media/Disease.png)
+*Upload plant images for instant AI-powered disease diagnosis with treatment recommendations*
 
-### 📸 **Disease Detection**
-![Disease Detection](https://via.placeholder.com/800x500/ef4444/ffffff?text=📸+AI+Disease+Detection)
+### 📈 **Market Intelligence & Live Prices**
+![Market Prices](media/Prcie.png)
+*Current crop prices with trend indicators and market analysis*
+
+</div>
+
+---
+
+## 🌟 **COMPLETE FEATURE SHOWCASE**
+
+<div align="center">
+
+### � *e*Video Demo + Screenshots Gallery**
+
+| 🎬 **Demo Video** | 🧠 **AI Chat** | 🤖 **AI Response** |
+|:---:|:---:|:---:|
+| [![Video](media/AIchat.png)](media/Video.mp4) | ![Chat](media/AIchat.png) | ![Response](media/AiChatResponse.png) |
+| *Click to play full demo* | *Beautiful glass morphism UI* | *Hindi agricultural advice* |
+
+| 📸 **Disease Detection** | 📈 **Market Intelligence** | 🎯 **All Features** |
+|:---:|:---:|:---:|
+| ![Disease](media/Disease.png) | ![Market](media/Prcie.png) | **Working Demo Ready!** |
+| *AI-powered plant diagnosis* | *Real-time crop prices* | *600M+ farmers impact* |
 
 </div>
 
@@ -240,11 +224,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 ## 🌟 **WHAT MAKES US SPECIAL**
 
-<div align="center">
-
 ### 🎯 **Perfect Problem-Solution Fit**
-
-</div>
 
 | 🔴 **PROBLEM** | 🟢 **OUR SOLUTION** | 🎯 **RESULT** |
 |:---|:---|:---|
@@ -266,14 +246,14 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 ### 📅 **Phase 2** *(6 Months)*
 🔗 Blockchain supply chain • 🥽 AR/VR experiences • 🚁 Drone integration • 📊 Advanced analytics
 
-### 📅 **Phase 3** *(1 Year)*
+### � **Ph ase 3** *(1 Year)*
 🌍 International expansion • 🏛️ Government partnerships • 🏢 Enterprise solutions • 🔬 AI research center
 
 </div>
 
 ---
 
-## 🎯 **INSTALLATION & SETUP**
+## �  **INSTALLATION & SETUP**
 
 <details>
 <summary><strong>🔧 Detailed Setup Instructions (Click to expand)</strong></summary>
@@ -354,8 +334,6 @@ Expected: Real-time crop prices with trends
 
 <div align="center">
 
-### 🎖️ **Built for Excellence**
-
 [![Innovation Award](https://img.shields.io/badge/🏆_Innovation-Award_Ready-gold?style=for-the-badge)](https://hackathon.com)
 [![Technical Excellence](https://img.shields.io/badge/💻_Technical-Excellence-blue?style=for-the-badge)](https://hackathon.com)
 [![Social Impact](https://img.shields.io/badge/🌍_Social-Impact-green?style=for-the-badge)](https://hackathon.com)
@@ -385,9 +363,9 @@ Expected: Real-time crop prices with trends
 
 ### **Ready to transform Indian agriculture?**
 
-[![Start Demo](https://img.shields.io/badge/🚀_START-DEMO-4ade80?style=for-the-badge&logo=rocket)](http://localhost:3000)
-[![API Docs](https://img.shields.io/badge/📚_API-DOCS-3b82f6?style=for-the-badge&logo=swagger)](http://localhost:8001/docs)
-[![Contact Us](https://img.shields.io/badge/💬_CONTACT-US-ef4444?style=for-the-badge&logo=gmail)](mailto:team@krishiai.com)
+[![Start Demo](https://img.shields.io/badge/🚀_START-DEMO-4ade80?style=for-the-badge)](http://localhost:3000)
+[![API Docs](https://img.shields.io/badge/📚_API-DOCS-3b82f6?style=for-the-badge)](http://localhost:8001/docs)
+[![Contact Us](https://img.shields.io/badge/💬_CONTACT-US-ef4444?style=for-the-badge)](mailto:team@krishiai.com)
 
 </div>
 
@@ -415,6 +393,6 @@ Expected: Real-time crop prices with trends
 
 ---
 
-<img src="https://via.placeholder.com/1200x100/4ade80/ffffff?text=⭐+STAR+THIS+REPO+IF+YOU+BELIEVE+IN+AI-POWERED+AGRICULTURE!+⭐" alt="Star this repo" width="100%"/>
+**⭐ Star this repo if you believe in AI-powered agriculture! ⭐**
 
 </div>
