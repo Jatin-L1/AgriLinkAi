@@ -1,7 +1,5 @@
 <div align="center">
 
-![Banner](media/AIchat.png)
-
 # 🌾 कृषि AI सलाहकार
 ### *Revolutionary Agricultural Intelligence Platform*
 
