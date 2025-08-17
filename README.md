@@ -19,14 +19,9 @@
 ## � ***DEMO VIDEO - WATCH OUR PLATFORM IN ACTION!**
 
 <video width="100%" controls>
-  <source src="media/Video.mp4" type="video/mp4">
+  <source src="https://youtu.be/7WCS9BkuUxU" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-**[📹 DOWNLOAD VIDEO IF NOT PLAYING](media/Video.mp4)**
-
-*3-minute comprehensive demo showcasing all features of कृषि AI सलाहकार*
-
 </div>
 
 ---
@@ -159,20 +154,6 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 | **⚡ Response Time** | **<2 seconds** | Lightning-fast AI processing |
 | **🌍 Languages** | **5+** | Hindi, Punjabi, English, and more |
 | **🔄 Uptime** | **99.9%** | Production-ready reliability |
-
----
-
-## � **DEEMO VIDEO**
-
-<div align="center">
-
-### **🎥 Watch Our Platform in Action!**
-
-https://github.com/user-attachments/assets/your-video-id-here
-
-*3-minute demo showcasing all features of कृषि AI सलाहकार*
-
-</div>
 
 ---
 
@@ -375,15 +356,14 @@ Expected: Real-time crop prices with trends
 
 ### **🌾 कृषि AI सलाहकार Team**
 
-📧 **Email**: [team@krishiai.com](mailto:team@krishiai.com)  
-🐙 **GitHub**: [Repository Link](https://github.com/your-repo)  
+📧 **Email**: [team@krishiai.com](mailto:jatin2026.be23@chitkara.edu.in)  
+🐙 **GitHub**: [Repository Link](https://github.com/Jatin-L1/AgriLinkAi)  
 🌐 **Demo**: [http://localhost:3000](http://localhost:3000)  
 📖 **API Docs**: [http://localhost:8001/docs](http://localhost:8001/docs)  
 
 ---
 
 ### **Built with ❤️ for Indian Farmers**
-### **Bangalore Hackathon 2025**
 
 *"Empowering Agriculture through Artificial Intelligence"*
 
