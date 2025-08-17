@@ -652,7 +652,7 @@ npm start
 ```
 
 ### **🌐 Step 4: Open the Magic**
-Visit: **[http://localhost:3000](http://localhost:3000)**
+Visit: **[https://agri-link-ai.vercel.app/](https://agri-link-ai.vercel.app/)**
 
 ### **🏥 Step 5: Health Check**
 Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/api/health)**
@@ -887,7 +887,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 <td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/monitor.png"><br>
 <strong>🌐 Live Demo</strong><br>
-<a href="http://localhost:3000">localhost:3000</a><br>
+<a href="https://agri-link-ai.vercel.app/">https://agri-link-ai.vercel.app/</a><br>
 <em>Working platform demo</em>
 </td>
 <td align="center" style="padding: 20px;">
