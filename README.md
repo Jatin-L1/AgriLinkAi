@@ -875,7 +875,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 <td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/email.png"><br>
 <strong>📧 Email</strong><br>
-<a href="mailto:jatin2026.be23@chitkara.edu.in">team@krishiai.com</a><br>
+<a href="mailto:jatin2026.be23@chitkara.edu.in">jatin2026.be23@chitkara.edu.in</a><br>
 <em>Primary contact for partnerships</em>
 </td>
 <td align="center" style="padding: 20px;">
