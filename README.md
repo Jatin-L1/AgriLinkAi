@@ -61,6 +61,25 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 ---
 
+## 📱 **SMS DEMO** *(Rural Farmers Can Text for AI Advice!)*
+
+### 🎬 **Test SMS Functionality**
+
+```bash
+cd backend
+python short_sms_demo.py
+```
+
+**Choose option 3** for comprehensive farmer demo:
+- 👥 **8 farmers** from different Indian states
+- 📱 **16 SMS messages** (questions + AI responses)
+- 🎥 **Perfect for video demo** - shows pan-India coverage
+- 🌾 **Crop advice, market prices, disease help, government schemes**
+
+*Demonstrates how 600M+ farmers can get AI advice via SMS in Hindi!*
+
+---
+
 ## 🎨 **STUNNING FEATURES THAT IMPRESS**
 
 <div align="center">

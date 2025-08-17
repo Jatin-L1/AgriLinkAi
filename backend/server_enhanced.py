@@ -49,7 +49,14 @@ db = None
 twilio_client = None
 
 if TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN:
-    twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+    try:
+        from twilio.http.http_client import TwilioHttpClient
+        # Create custom HTTP client with longer timeout
+        http_client = TwilioHttpClient(timeout=60)
+        twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, http_client=http_client)
+    except Exception as e:
+        logger.warning(f"Twilio client initialization failed: {e}")
+        twilio_client = None
 
 # Enhanced system prompts
 AGRICULTURE_SYSTEM_PROMPT = """
@@ -454,6 +461,87 @@ def get_current_season() -> str:
     else:
         return "जायद (Zaid)"
 
+# SMS/WhatsApp functionality
+async def send_sms_response(phone_number: str, message: str) -> bool:
+    """Send SMS response using Twilio"""
+    try:
+        if not twilio_client:
+            logger.error("Twilio client not configured")
+            return False
+        
+        # Ensure phone number is in international format
+        if not phone_number.startswith('+'):
+            if phone_number.startswith('91'):
+                phone_number = '+' + phone_number
+            elif phone_number.startswith('0'):
+                phone_number = '+91' + phone_number[1:]
+            else:
+                phone_number = '+91' + phone_number
+        
+        message = twilio_client.messages.create(
+            body=message,
+            from_=TWILIO_PHONE_NUMBER,
+            to=phone_number
+        )
+        
+        logger.info(f"SMS sent successfully to {phone_number}, SID: {message.sid}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"SMS sending failed: {e}")
+        return False
+
+def format_sms_response(ai_response: str, query_type: str = "general") -> str:
+    """Format AI response for SMS (160 char limit consideration)"""
+    # Clean and truncate response for SMS
+    response = ai_response.replace('\n\n', '\n').strip()
+    
+    # Add signature
+    signature = "\n\n- कृषि मित्र AI"
+    
+    # If response is too long, truncate and add continuation message
+    max_length = 1400  # Leave room for signature and continuation
+    if len(response) > max_length:
+        response = response[:max_length] + "...\n\nअधिक जानकारी के लिए वेबसाइट पर जाएं: http://localhost:3000"
+    
+    return response + signature
+
+def parse_sms_query(message_body: str) -> dict:
+    """Parse incoming SMS to extract query type and parameters"""
+    message = message_body.lower().strip()
+    
+    # Define query patterns
+    patterns = {
+        'crop': ['फसल', 'crop', 'बुआई', 'sowing', 'खेती', 'farming'],
+        'weather': ['मौसम', 'weather', 'बारिश', 'rain', 'तापमान', 'temperature'],
+        'disease': ['रोग', 'disease', 'बीमारी', 'illness', 'कीट', 'pest'],
+        'market': ['मंडी', 'market', 'भाव', 'price', 'दाम', 'rate'],
+        'soil': ['मिट्टी', 'soil', 'भूमि', 'land'],
+        'scheme': ['योजना', 'scheme', 'सब्सिडी', 'subsidy']
+    }
+    
+    query_type = 'general'
+    for qtype, keywords in patterns.items():
+        if any(keyword in message for keyword in keywords):
+            query_type = qtype
+            break
+    
+    # Extract location if mentioned
+    location = None
+    indian_states = ['punjab', 'haryana', 'uttar pradesh', 'bihar', 'rajasthan', 
+                    'maharashtra', 'gujarat', 'madhya pradesh', 'karnataka', 'andhra pradesh']
+    
+    for state in indian_states:
+        if state in message:
+            location = state.title()
+            break
+    
+    return {
+        'query_type': query_type,
+        'location': location,
+        'original_message': message_body
+    }
+
 # API Endpoints
 @app.get("/")
 async def root():
@@ -719,6 +807,235 @@ async def get_analytics_dashboard():
     except Exception as e:
         logger.error(f"Analytics error: {e}")
         return {"error": "Analytics data unavailable"}
+
+# SMS/WhatsApp Webhook Endpoints
+@app.post("/api/sms/webhook")
+async def sms_webhook(
+    From: str = Form(...),
+    To: str = Form(...),
+    Body: str = Form(...),
+    MessageSid: str = Form(...)
+):
+    """Handle incoming SMS messages from Twilio"""
+    try:
+        logger.info(f"Received SMS from {From}: {Body}")
+        
+        # Parse the incoming message
+        parsed_query = parse_sms_query(Body)
+        phone_number = From
+        
+        # Process the query based on type
+        if parsed_query['query_type'] == 'crop':
+            response = await handle_crop_sms_query(Body, parsed_query['location'])
+        elif parsed_query['query_type'] == 'weather':
+            response = await handle_weather_sms_query(Body, parsed_query['location'])
+        elif parsed_query['query_type'] == 'market':
+            response = await handle_market_sms_query(Body, parsed_query['location'])
+        elif parsed_query['query_type'] == 'disease':
+            response = await handle_disease_sms_query(Body)
+        elif parsed_query['query_type'] == 'soil':
+            response = await handle_soil_sms_query(Body, parsed_query['location'])
+        elif parsed_query['query_type'] == 'scheme':
+            response = await handle_scheme_sms_query(Body)
+        else:
+            # General AI query
+            response = await handle_general_sms_query(Body, parsed_query['location'])
+        
+        # Format response for SMS
+        formatted_response = format_sms_response(response, parsed_query['query_type'])
+        
+        # Send response back
+        success = await send_sms_response(phone_number, formatted_response)
+        
+        # Store in database
+        try:
+            if db is not None:
+                sms_document = {
+                    "message_sid": MessageSid,
+                    "from_number": From,
+                    "to_number": To,
+                    "query": Body,
+                    "response": formatted_response,
+                    "query_type": parsed_query['query_type'],
+                    "location": parsed_query['location'],
+                    "timestamp": datetime.now().isoformat(),
+                    "sent_successfully": success
+                }
+                await db.sms_queries.insert_one(sms_document)
+        except Exception as e:
+            logger.warning(f"Database storage failed: {e}")
+        
+        return {"status": "processed", "message_sid": MessageSid}
+        
+    except Exception as e:
+        logger.error(f"SMS webhook error: {e}")
+        # Send error message to user
+        error_msg = "माफ करें, तकनीकी समस्या के कारण आपका प्रश्न प्रोसेस नहीं हो सका। कृपया बाद में कोशिश करें।\n\n- कृषि मित्र AI"
+        await send_sms_response(From, error_msg)
+        return {"status": "error", "message": str(e)}
+
+# SMS Query Handlers
+async def handle_crop_sms_query(query: str, location: str = None) -> str:
+    """Handle crop-related SMS queries"""
+    location = location or "भारत"
+    
+    # Get weather and soil data
+    weather_data = await get_enhanced_weather_data(location)
+    soil_data = await analyze_soil_data(location)
+    
+    prompt = f"""
+    किसान का प्रश्न: {query}
+    स्थान: {location}
+    मौसम: {weather_data.temperature}°C, {weather_data.description}
+    मिट्टी: pH {soil_data.ph_level}, {soil_data.soil_type}
+    
+    कृपया संक्षिप्त और व्यावहारिक सलाह दें (SMS के लिए):
+    """
+    
+    return await call_ollama_api(prompt)
+
+async def handle_weather_sms_query(query: str, location: str = None) -> str:
+    """Handle weather-related SMS queries"""
+    location = location or "भारत"
+    weather_data = await get_enhanced_weather_data(location)
+    
+    response = f"""मौसम जानकारी - {weather_data.location}:
+🌡️ तापमान: {weather_data.temperature}°C
+💧 आर्द्रता: {weather_data.humidity}%
+🌤️ मौसम: {weather_data.description}
+🌬️ हवा: {weather_data.wind_speed} km/h
+☔ बारिश: {weather_data.rainfall or 0}mm
+
+कृषि सलाह: {"सिंचाई की जरूरत हो सकती है" if weather_data.rainfall < 10 else "बारिश के कारण सिंचाई रोकें"}"""
+    
+    return response
+
+async def handle_market_sms_query(query: str, location: str = None) -> str:
+    """Handle market price SMS queries"""
+    # Get current market prices
+    market_data = await get_market_prices()
+    
+    response = "आज के मंडी भाव:\n"
+    for crop, data in market_data["prices"].items():
+        trend_emoji = "📈" if data["trend"] == "up" else "📉" if data["trend"] == "down" else "➡️"
+        response += f"{crop}: ₹{data['price']}/{data['unit']} {trend_emoji}\n"
+    
+    response += "\nबेचने का सुझाव: बढ़ते भाव वाली फसलें जल्दी बेचें।"
+    return response
+
+async def handle_disease_sms_query(query: str) -> str:
+    """Handle disease-related SMS queries"""
+    prompt = f"""
+    किसान का रोग संबंधी प्रश्न: {query}
+    
+    कृपया संक्षिप्त सलाह दें:
+    1. संभावित रोग
+    2. तुरंत करने योग्य उपाय
+    3. रोकथाम के तरीके
+    
+    SMS के लिए छोटा उत्तर दें।
+    """
+    
+    return await call_ollama_api(prompt)
+
+async def handle_soil_sms_query(query: str, location: str = None) -> str:
+    """Handle soil-related SMS queries"""
+    location = location or "भारत"
+    soil_data = await analyze_soil_data(location)
+    
+    response = f"""मिट्टी की जानकारी - {location}:
+🌱 प्रकार: {soil_data.soil_type}
+⚗️ pH: {soil_data.ph_level}
+🧪 NPK: N-{soil_data.nitrogen}, P-{soil_data.phosphorus}, K-{soil_data.potassium}
+💧 नमी: {soil_data.moisture}%
+
+सुझाव: {"चूना डालें" if soil_data.ph_level < 6.5 else "जिप्सम डालें" if soil_data.ph_level > 8 else "मिट्टी संतुलित है"}"""
+    
+    return response
+
+async def handle_scheme_sms_query(query: str) -> str:
+    """Handle government scheme SMS queries"""
+    schemes_data = await get_government_schemes()
+    
+    response = "सरकारी योजनाएं:\n"
+    for scheme in schemes_data["schemes"][:3]:  # Limit to 3 schemes for SMS
+        response += f"• {scheme['name']}: {scheme['benefit']}\n"
+    
+    response += "\nअधिक जानकारी: अपने कृषि कार्यालय से संपर्क करें।"
+    return response
+
+async def handle_general_sms_query(query: str, location: str = None) -> str:
+    """Handle general SMS queries with AI"""
+    location = location or "भारत"
+    
+    # Get context data
+    weather_data = await get_enhanced_weather_data(location)
+    soil_data = await analyze_soil_data(location)
+    current_season = get_current_season()
+    
+    prompt = f"""
+    आप एक कृषि विशेषज्ञ हैं। SMS के लिए संक्षिप्त उत्तर दें।
+    
+    किसान का प्रश्न: {query}
+    स्थान: {location}
+    मौसम: {weather_data.temperature}°C, {weather_data.description}
+    मिट्टी: {soil_data.soil_type}, pH {soil_data.ph_level}
+    सीजन: {current_season}
+    
+    व्यावहारिक और छोटा उत्तर दें (SMS के लिए उपयुक्त):
+    """
+    
+    return await call_ollama_api(prompt)
+
+class SMSRequest(BaseModel):
+    phone_number: str
+    message: str
+
+@app.post("/api/sms/send")
+async def send_sms_manual(request: SMSRequest):
+    """Manual SMS sending endpoint for testing"""
+    try:
+        success = await send_sms_response(request.phone_number, request.message)
+        return {
+            "success": success,
+            "phone_number": request.phone_number,
+            "message": request.message,
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        logger.error(f"Manual SMS sending failed: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/sms/test")
+async def test_sms_functionality():
+    """Test SMS functionality and configuration"""
+    try:
+        if not twilio_client:
+            return {
+                "status": "error",
+                "message": "Twilio not configured",
+                "twilio_configured": False
+            }
+        
+        # Test Twilio connection
+        account = twilio_client.api.accounts(TWILIO_ACCOUNT_SID).fetch()
+        
+        return {
+            "status": "success",
+            "message": "SMS functionality ready",
+            "twilio_configured": True,
+            "account_sid": TWILIO_ACCOUNT_SID,
+            "phone_number": TWILIO_PHONE_NUMBER,
+            "account_status": account.status,
+            "webhook_url": "http://localhost:8001/api/sms/webhook"
+        }
+        
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"SMS test failed: {str(e)}",
+            "twilio_configured": bool(twilio_client)
+        }
 
 if __name__ == "__main__":
     import uvicorn
