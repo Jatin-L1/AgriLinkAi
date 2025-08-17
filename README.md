@@ -265,7 +265,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 <div align="center">
 
-## 🏆 **WHY THIS WINS BANGALORE HACKATHON 2025**
+## 🏆 **WHY THIS WINS Capital One Launchpad Hackathon 2025**
 
 <img src="https://user-images.githubusercontent.com/74038190/216644497-1951db19-8f3d-4e44-ac08-8e9d7a0d7215.gif" width="100">
 
@@ -909,7 +909,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 *"Empowering Agriculture through Artificial Intelligence"*
 
-### **🏆 THIS IS OUR WINNING ENTRY FOR BANGALORE HACKATHON 2025! 🏆**
+### **🏆 THIS IS OUR WINNING ENTRY FOR Capital One Launchpad HACKATHON 2025! 🏆**
 
 ---
 
