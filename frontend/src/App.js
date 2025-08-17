@@ -172,7 +172,7 @@ function App() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
-                  कृषि AI सलाहकार
+                  एग्रीलिंक AI सलाहकार
                 </h1>
                 <p className="text-green-600 text-sm flex items-center gap-2">
                   <Zap className="h-3 w-3" />
@@ -712,7 +712,7 @@ function App() {
                   Comprehensive Weather Analysis
                 </CardTitle>
                 <CardDescription>
-                  कृषि के लिए विस्तृत मौसम जानकारी और पूर्वानुमान
+                  एग्रीलिंक के लिए विस्तृत मौसम जानकारी और पूर्वानुमान
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
@@ -854,10 +854,10 @@ function App() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Brain className="h-6 w-6 text-green-600" />
-                <h3 className="font-bold text-green-800">कृषि AI सलाहकार</h3>
+                <h3 className="font-bold text-green-800">एग्रीलिंक AI सलाहकार</h3>
               </div>
               <p className="text-sm text-gray-600">
-                भारतीय किसानों के लिए AI-powered स्मार्ट कृषि समाधान। 
+                भारतीय किसानों के लिए AI-powered स्मार्ट एग्रीलिंक समाधान। 
                 Ollama AI के साथ उन्नत तकनीक।
               </p>
             </div>
