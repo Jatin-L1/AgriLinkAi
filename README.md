@@ -25,18 +25,15 @@
 ## 🎬 ***WATCH OUR PLATFORM IN ACTION!*** 
 
 <div align="center">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/7WCS9BkuUxU" 
-        title="कृषि AI सलाहकार Demo Video" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen
-        style="border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-</iframe>
 
-<br><br>
+### 🎥 **Demo Video**
+
+[![कृषि AI सलाहकार Demo Video](https://img.shields.io/badge/🎬_Watch_Demo_Video-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=7WCS9BkuUxU)
+
+> **Note:** Click the badge above to watch our comprehensive platform demonstration
 
 <details>
-<summary><strong>🎥 Can't see the video? Click here for direct link</strong></summary>
+<summary><strong>🎥 Alternative Video Links</strong></summary>
 <br>
 <a href="https://youtu.be/7WCS9BkuUxU" target="_blank">
 <img src="https://img.shields.io/badge/🎬_Watch_on-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white"/>
@@ -555,7 +552,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 
 <table align="center">
 <tr>
-<td align="center" width="33%" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; color: white; margin: 10px;">
+<td align="center" width="33%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/calendar.png"><br>
 <strong>📅 PHASE 1 (Post-Hackathon)</strong><br>
 <em>Next 3 Months</em><br><br>
@@ -566,7 +563,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 🚁 Drone imagery analysis<br>
 📊 Blockchain crop traceability
 </td>
-<td align="center" width="33%" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 15px; color: white; margin: 10px;">
+<td align="center" width="33%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/rocket.png"><br>
 <strong>📅 PHASE 2 (6 Months)</strong><br>
 <em>Scale & Innovation</em><br><br>
@@ -577,7 +574,7 @@ chmod +x start_enhanced.sh && ./start_enhanced.sh
 🏭 Smart farming equipment integration<br>
 🌍 Climate change adaptation models
 </td>
-<td align="center" width="33%" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 15px; color: white; margin: 10px;">
+<td align="center" width="33%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/globe.png"><br>
 <strong>📅 PHASE 3 (1 Year)</strong><br>
 <em>Global Expansion</em><br><br>
@@ -749,25 +746,33 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 <table align="center">
 <tr>
-<td align="center" style="background: linear-gradient(45deg, #FFD700, #FFA500); padding: 20px; border-radius: 15px; color: #000; margin: 10px;">
-[![Innovation Award](https://img.shields.io/badge/🏆_Innovation-Award_Ready-gold?style=for-the-badge)](https://hackathon.com)<br>
+<td align="center" style="padding: 20px;">
+<a href="https://hackathon.com">
+<img src="https://img.shields.io/badge/🏆_Innovation-Award_Ready-gold?style=for-the-badge">
+</a><br>
 <strong>🚀 INNOVATION EXCELLENCE</strong><br>
 <em>First-ever local AI agricultural platform</em>
 </td>
-<td align="center" style="background: linear-gradient(45deg, #87CEEB, #4169E1); padding: 20px; border-radius: 15px; color: #fff; margin: 10px;">
-[![Technical Excellence](https://img.shields.io/badge/💻_Technical-Excellence-blue?style=for-the-badge)](https://hackathon.com)<br>
+<td align="center" style="padding: 20px;">
+<a href="https://hackathon.com">
+<img src="https://img.shields.io/badge/💻_Technical-Excellence-blue?style=for-the-badge">
+</a><br>
 <strong>💻 TECHNICAL MASTERY</strong><br>
 <em>Production-ready code architecture</em>
 </td>
 </tr>
 <tr>
-<td align="center" style="background: linear-gradient(45deg, #98FB98, #228B22); padding: 20px; border-radius: 15px; color: #000; margin: 10px;">
-[![Social Impact](https://img.shields.io/badge/🌍_Social-Impact-green?style=for-the-badge)](https://hackathon.com)<br>
+<td align="center" style="padding: 20px;">
+<a href="https://hackathon.com">
+<img src="https://img.shields.io/badge/🌍_Social-Impact-green?style=for-the-badge">
+</a><br>
 <strong>🌍 SOCIAL TRANSFORMATION</strong><br>
 <em>600M+ farmers impact potential</em>
 </td>
-<td align="center" style="background: linear-gradient(45deg, #DDA0DD, #8A2BE2); padding: 20px; border-radius: 15px; color: #fff; margin: 10px;">
-[![Best Demo](https://img.shields.io/badge/🎬_Best-Demo-purple?style=for-the-badge)](https://hackathon.com)<br>
+<td align="center" style="padding: 20px;">
+<a href="https://hackathon.com">
+<img src="https://img.shields.io/badge/🎬_Best-Demo-purple?style=for-the-badge">
+</a><br>
 <strong>🎬 DEMO PERFECTION</strong><br>
 <em>Working live demonstration</em>
 </td>
@@ -786,7 +791,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 <table align="center">
 <tr>
-<td align="center" width="25%" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; color: white; margin: 5px;">
+<td align="center" width="25%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/farmer.png"><br>
 <strong>🌾 FOR FARMERS</strong><br>
 <em>Get AI-powered agricultural advice in your native language, available 24/7</em><br><br>
@@ -795,7 +800,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 ✅ Offline capabilities<br>
 ✅ SMS integration
 </td>
-<td align="center" width="25%" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 15px; color: white; margin: 5px;">
+<td align="center" width="25%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/government.png"><br>
 <strong>🏛️ FOR GOVERNMENT</strong><br>
 <em>Scale agricultural extension services digitally across entire states</em><br><br>
@@ -804,7 +809,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 ✅ Data-driven insights<br>
 ✅ Policy impact tracking
 </td>
-<td align="center" width="25%" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 15px; color: white; margin: 5px;">
+<td align="center" width="25%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/office-building.png"><br>
 <strong>🏢 FOR ENTERPRISES</strong><br>
 <em>Partner with us to transform agriculture supply chains</em><br><br>
@@ -813,7 +818,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 ✅ Custom integrations<br>
 ✅ Enterprise support
 </td>
-<td align="center" width="25%" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 20px; border-radius: 15px; color: white; margin: 5px;">
+<td align="center" width="25%" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/64/developer.png"><br>
 <strong>👨‍💻 FOR DEVELOPERS</strong><br>
 <em>Contribute to open-source agricultural AI revolution</em><br><br>
@@ -835,14 +840,20 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 <table align="center">
 <tr>
-<td align="center">
-[![Start Demo](https://img.shields.io/badge/🚀_START-LIVE_DEMO-4ade80?style=for-the-badge&logo=rocket&logoColor=white)](http://localhost:3000)
+<td align="center" style="padding: 10px;">
+<a href="http://localhost:3000">
+<img src="https://img.shields.io/badge/🚀_START-LIVE_DEMO-4ade80?style=for-the-badge&logo=rocket&logoColor=white">
+</a>
 </td>
-<td align="center">
-[![API Docs](https://img.shields.io/badge/📚_API-DOCUMENTATION-3b82f6?style=for-the-badge&logo=swagger&logoColor=white)](http://localhost:8001/docs)
+<td align="center" style="padding: 10px;">
+<a href="http://localhost:8001/docs">
+<img src="https://img.shields.io/badge/📚_API-DOCUMENTATION-3b82f6?style=for-the-badge&logo=swagger&logoColor=white">
+</a>
 </td>
-<td align="center">
-[![Contact Us](https://img.shields.io/badge/💬_CONTACT-TEAM-ef4444?style=for-the-badge&logo=mail&logoColor=white)](mailto:team@krishiai.com)
+<td align="center" style="padding: 10px;">
+<a href="mailto:team@krishiai.com">
+<img src="https://img.shields.io/badge/💬_CONTACT-TEAM-ef4444?style=for-the-badge&logo=mail&logoColor=white">
+</a>
 </td>
 </tr>
 </table>
@@ -861,28 +872,28 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 <table align="center">
 <tr>
-<td align="center" style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; color: white;">
+<td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/email.png"><br>
-**📧 Email**<br>
-[team@krishiai.com](mailto:jatin2026.be23@chitkara.edu.in)<br>
+<strong>📧 Email</strong><br>
+<a href="mailto:jatin2026.be23@chitkara.edu.in">team@krishiai.com</a><br>
 <em>Primary contact for partnerships</em>
 </td>
-<td align="center" style="background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 15px; color: white;">
+<td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/github.png"><br>
-**🐙 GitHub**<br>
-[Repository Link](https://github.com/Jatin-L1/AgriLinkAi)<br>
+<strong>🐙 GitHub</strong><br>
+<a href="https://github.com/Jatin-L1/AgriLinkAi">Repository Link</a><br>
 <em>Open source codebase</em>
 </td>
-<td align="center" style="background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 15px; color: white;">
+<td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/monitor.png"><br>
-**🌐 Live Demo**<br>
-[localhost:3000](http://localhost:3000)<br>
+<strong>🌐 Live Demo</strong><br>
+<a href="http://localhost:3000">localhost:3000</a><br>
 <em>Working platform demo</em>
 </td>
-<td align="center" style="background: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%); padding: 20px; border-radius: 15px; color: white;">
+<td align="center" style="padding: 20px;">
 <img src="https://img.icons8.com/fluency/48/api.png"><br>
-**📖 API Docs**<br>
-[localhost:8001/docs](http://localhost:8001/docs)<br>
+<strong>📖 API Docs</strong><br>
+<a href="http://localhost:8001/docs">localhost:8001/docs</a><br>
 <em>Complete API documentation</em>
 </td>
 </tr>
@@ -904,7 +915,7 @@ Verify all systems: **[http://localhost:8001/api/health](http://localhost:8001/a
 
 <table align="center">
 <tr>
-<td align="center" style="background: linear-gradient(45deg, #FFD700, #FFA500); padding: 15px; border-radius: 15px; color: #000;">
+<td align="center" style="padding: 15px;">
 <strong>⭐ IF YOU BELIEVE IN AI-POWERED AGRICULTURE ⭐</strong><br>
 <strong>PLEASE STAR THIS REPOSITORY! ⭐</strong><br>
 <em>Every star brings us closer to transforming 600M+ farmers' lives</em>
