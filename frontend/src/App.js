@@ -900,7 +900,7 @@ function App() {
           
           <div className="text-center text-gray-600">
             <p className="text-sm">
-              Enhanced Agricultural AI Platform • Built for Bangalore Hackathon 2025
+              Enhanced Agricultural AI Platform • Built for Capital One Launchpad 2025 Hackathon
             </p>
             <p className="text-xs mt-1 flex items-center justify-center gap-2">
               <Zap className="h-3 w-3" />
