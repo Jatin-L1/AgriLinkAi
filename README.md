@@ -35,7 +35,7 @@
 <details>
 <summary><strong>🎥 Alternative Video Links</strong></summary>
 <br>
-<a href="https://youtu.be/7WCS9BkuUxU" target="_blank">
+<a href="https://youtu.be/a5yCU7wX-YY" target="_blank">
 <img src="https://img.shields.io/badge/🎬_Watch_on-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white"/>
 </a>
 </details>
